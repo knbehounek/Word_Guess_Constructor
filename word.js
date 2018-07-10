@@ -1,4 +1,4 @@
-var request = require("./letter.js");
+var Letter = require("./letter.js");
 
 var Word = function(word){
 
@@ -19,6 +19,10 @@ var Word = function(word){
 		}
 	}
 }
-var someWord = new Word ("Burnsville");
-someWord.splitWord();
-someWord.letterCreation();
+
+// //Test for Word
+// var testWord = new Word ("Dragon");
+// testWord.splitWord();
+// testWord.letterCreation();
+
+module.exports = Word;
