@@ -2,9 +2,9 @@ var Letter = require("./letter.js");
 
 var Word = function(word){
 
-    this.word = word,
-    this.letters = [],
-    this.underscores = [],
+    this.word = word;
+    this.letters = [];
+    this.underscores = [];
 
     this.wordSplitter = function() {
         this.letters = this.word.split("");
@@ -20,9 +20,9 @@ var Word = function(word){
 	}
 }
 
-// //Test for Word
+// // //Test for Word
 // var testWord = new Word ("Dragon");
-// testWord.splitWord();
+// testWord.wordSplitter();
 // testWord.letterCreation();
 
 module.exports = Word;

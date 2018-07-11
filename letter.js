@@ -13,4 +13,8 @@ var Letter = function(letterCharacter) {
 	}
 }
 
+
+// var letterCharacter = new Letter ("a");
+// letterCharacter.showCharacter();
+
 module.exports = Letter
