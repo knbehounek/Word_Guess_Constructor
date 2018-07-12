@@ -2,12 +2,12 @@ var Letter = function(letterCharacter) {
 	
 	this.letterCharacter = letterCharacter.toUpperCase();
 	this.letterGuessedCorrectly = false;
-	this.showCharacter = function() {
+	this.showLetter = function() {
 		if (this.letterGuessedCorrectly) {
 			console.log(this.letterCharacter);
 		}
 		else {
-			console.log ("_");
+			 console.log ("_");
 		}
 
 	}

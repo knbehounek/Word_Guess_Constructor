@@ -15,7 +15,7 @@ var Word = function(word){
     this.letterCreation = function() {
 		for (i=0; i < this.letters.length; i++){
 			this.letters[i] = new Letter (this.letters[i]);
-			this.letters[i].showCharacter();
+			this.letters[i].showLetter();
 		}
 	}
 }

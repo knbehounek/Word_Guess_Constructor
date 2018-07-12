@@ -11,8 +11,6 @@ var gamesWon = 0;
 var gamesLost = 0;
 var remainingChances = 10;
 
-var userschoice = "";
-
 var underscoresFilled = 0;
 
 var wordList = [
@@ -71,7 +69,7 @@ function getRandomWord() {
     chooserandomWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     someotherWord = new Word(chooserandomWord);
     console.log("The word has " + chooserandomWord.length + " letters.");
-    console.log("WORD TO GUESS:");
+    console.log("The word to guess:");
     someotherWord.wordSplitter();
     someotherWord.letterCreation();
     letterGuess();
@@ -89,14 +87,15 @@ function letterGuess() {
             console.log("You guessed the letter: " + theGuess.letter.toUpperCase());
             userGuessedCorrectly = false;
             if (lettersAlreadyGuessedListArray.indexOf(theGuess.letter.toUpperCase()) > -1) {
-                console.log("That letter has already been guessed. Please try another.");
+                console.log("That letter has already been guessed. Please try agian and guess a new letter.");
                 letterGuess();
             } else if (lettersAlreadyGuessedListArray.indexOf(theGuess.letter.toUpperCase()) === -1) {
                 lettersAlreadyGuessedList = lettersAlreadyGuessedList.concat(" " + theGuess.letter.toUpperCase());
                 lettersAlreadyGuessedListArray.push(theGuess.letter.toUpperCase());
                 console.log('Letters already guessed:' + lettersAlreadyGuessedList) 
+                //** ERROR HERE? */
                 for (i = 0; i < someotherWord.letters.length; i++) {
-                    if (theGuess.letter.toUpperCase() === someotherWord.letters[i].character && someotherWord.letters[i].letterGuessedCorrectly === false) {
+                    if (theGuess.letter.toUpperCase() === someotherWord.letters[i].letterCharacter && someotherWord.letters[i].letterGuessedCorrectly === false) {
                         someotherWord.letters[i].letterGuessedCorrectly === true;
                         userGuessedCorrectly = true;
                         someotherWord.underscores[i] = theGuess.letter.toUpperCase();
@@ -105,8 +104,8 @@ function letterGuess() {
                 }
                 console.log("THE WORD TO GUESS IS:");
                 someotherWord.wordSplitter();
+                 //** ERROR HERE? */
                 someotherWord.letterCreation();
-
                 if (userGuessedCorrectly) {
                     console.log('CORRECT!');
                     userWon();
@@ -132,8 +131,8 @@ function userWon() {
 		playAgain();
     }
     else if (underscoresFilled === someotherWord.letters.length) {
-		console.log(correct("YOU WON!"));
-		gamesWon;
+		console.log("YOU WON!");
+		gamesWon++;
 		console.log("Wins: " + gamesWon);
 		console.log("Losses: " + gamesLost);
 		playAgain();
@@ -163,7 +162,7 @@ function playAgain() {
 		}
 
 		else {
-			console.log("Good bye! Come back soon.");
+			console.log("Good bye! Thanks for playings.");
 			return;
 		}
 	});
