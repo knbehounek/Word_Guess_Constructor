@@ -6,6 +6,7 @@ var Letter = function(letterCharacter) {
 		if (this.letterGuessedCorrectly) {
 			console.log(this.letterCharacter);
 		}
+		//Error Here?
 		else {
 			 console.log ("_");
 		}
