@@ -8,7 +8,8 @@ The intended purpose behind this project was to utilize advanced Javascript and 
 
 ***Why the project is useful.
 
-This project is useful as it allows the user to acess mutlipl facets of information, a twitter users post with data and contact, Song Identification through spotify, Movie identification with the OMDB API. 
+This project is useful as it allows teaches the developer and user knowlwege about working within node yet in a fun a way.
+
 
 ***How users can get started with the project.
 
